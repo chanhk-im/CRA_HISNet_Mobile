@@ -1,26 +1,36 @@
 import React from 'react';
-import { View, Text, Button } from 'react-native';
+import { createMaterialTopTabNavigator } from "@react-navigation/material-top-tabs";
 
-export function RestaurantMainScreen({ navigation }) {
-    return (
-        <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-            <Text>Restaurant</Text>
-            <Button 
-                title="Student Restaurant" 
-                onPress={() => navigation.navigate("StudentRestaurant")} 
+import { GraceTableScreen } from "./GraceTableScreen";
+import { StudentRScreen } from "./StudentRScreen";
+import { MomsKitchenScreen } from "./MomsKitchenScreen";
+import { HandongLoungeScreen } from "./HandongLoungeScreen";
+
+const Tab = createMaterialTopTabNavigator();
+
+export function RestaurantMainScreen() {
+    return(
+        <Tab.Navigator>
+            <Tab.Screen 
+                name ="Student Restaurant" 
+                component={StudentRScreen} 
+                options={{tabBarLabel: "학생식당"}} 
             />
-            <Button 
-                title="MomsKitchen" 
-                onPress={() => navigation.navigate("MomsKitchen")} 
+            <Tab.Screen 
+                name ="MomsKtichen" 
+                component={MomsKitchenScreen} 
+                options={{tabBarLabel: "맘스키친"}} 
             />
-            <Button 
-                title="HandongLounge" 
-                onPress={() => navigation.navigate("HandongLounge")} 
+            <Tab.Screen 
+                name ="HandongLounge" 
+                component={HandongLoungeScreen} 
+                options={{tabBarLabel: "한동라운지"}} 
             />
-            <Button 
-                title="GraceTable" 
-                onPress={() => navigation.navigate("GraceTable")} 
-            />      
-        </View>
+            <Tab.Screen 
+                name ="GraceTable" 
+                component={GraceTableScreen}
+                options={{tabBarLabel: "더 그레이스 테이블"}} 
+            />
+        </Tab.Navigator>
     );
 }

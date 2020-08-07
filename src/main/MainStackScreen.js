@@ -2,27 +2,21 @@ import React from "react";
 import { createStackNavigator } from "@react-navigation/stack";
 
 import { NoticeMainScreen } from "./notice/NoticeMainScreen";
-    import { NormalScreen } from "./notice/NormalScreen";
-    import { SchoolScreen } from "./notice/SchoolScreen";
-    import { ScholarshipScreen } from "./notice/ScholarshipScreen";
-    import { DormitoryScreen } from "./notice/DormitoryScreen";
-    import { GraduateScreen } from "./notice/GraduateScreen";
-    import { EmploymentScreen } from "./notice/EmploymentScreen";
+import { NormalScreen } from "./notice/NormalScreen";
+import { SchoolScreen } from "./notice/SchoolScreen";
+import { ScholarshipScreen } from "./notice/ScholarshipScreen";
+import { DormitoryScreen } from "./notice/DormitoryScreen";
+import { GraduateScreen } from "./notice/GraduateScreen";
+import { EmploymentScreen } from "./notice/EmploymentScreen";
 
 import { RestaurantMainScreen } from "./restaurant/RestaurantMainScreen";
-    import { StudentRScreen } from "./restaurant/StudentRScreen";
-    import { MomsKitchenScreen } from "./restaurant/MomsKitchenScreen";
-    import { HandongLoungeScreen } from "./restaurant/HandongLoungeScreen";
-    import { GraceTableScreen } from "./restaurant/GraceTableScreen";
 
 import { HomeMainScreen } from "./home/HomeMainScreen";
-    import { InformationScreen } from "./home/InformationScreen";
+import { InformationScreen } from "./home/InformationScreen";
 
 import { LectureMainScreen } from "./lecture/LectureMainScreen";
 
 import { SettingsMainScreen } from "./settings/SettingsMainScreen";
-
-
 
 const NoticeStack = createStackNavigator();
 const RestaurantStack = createStackNavigator();
@@ -71,22 +65,6 @@ export function RestaurantStackScreen() {
             <RestaurantStack.Screen 
                 name="RestaurantMain" 
                 component={RestaurantMainScreen}
-            />
-            <RestaurantStack.Screen
-                name="StudentRestaurant"
-                component={StudentRScreen}
-            />
-            <RestaurantStack.Screen
-                name="MomsKitchen"
-                component={MomsKitchenScreen}
-            />
-            <RestaurantStack.Screen
-                name="HandongLounge"
-                component={HandongLoungeScreen}
-            />
-            <RestaurantStack.Screen
-                name="GraceTable"
-                component={GraceTableScreen}
             />
         </RestaurantStack.Navigator>
     );
