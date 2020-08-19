@@ -3,11 +3,11 @@ import { createStackNavigator } from "@react-navigation/stack";
 
 import { NoticeMainScreen } from "./notice/NoticeMainScreen";
 import { NormalScreen } from "./notice/NormalScreen";
-import { SchoolScreen } from "./notice/SchoolScreen";
-import { ScholarshipScreen } from "./notice/ScholarshipScreen";
-import { DormitoryScreen } from "./notice/DormitoryScreen";
-import { GraduateScreen } from "./notice/GraduateScreen";
-import { EmploymentScreen } from "./notice/EmploymentScreen";
+// import { SchoolScreen } from "./notice/SchoolScreen";
+// import { ScholarshipScreen } from "./notice/ScholarshipScreen";
+// import { DormitoryScreen } from "./notice/DormitoryScreen";
+// import { GraduateScreen } from "./notice/GraduateScreen";
+// import { EmploymentScreen } from "./notice/EmploymentScreen";
 
 import { RestaurantMainScreen } from "./restaurant/RestaurantMainScreen";
 
@@ -31,29 +31,9 @@ export function NoticeStackScreen() {
                 name="NoticeMain" 
                 component={NoticeMainScreen}
             />
-             <NoticeStack.Screen 
+            <NoticeStack.Screen 
                 name="Normal" 
                 component={NormalScreen}
-            />
-            <NoticeStack.Screen 
-                name="School" 
-                component={SchoolScreen}
-            />
-            <NoticeStack.Screen 
-                name="Scholarship" 
-                component={ScholarshipScreen}
-            />
-            <NoticeStack.Screen 
-                name="Dormitory" 
-                component={DormitoryScreen}
-            />
-            <NoticeStack.Screen 
-                name="Graduate" 
-                component={GraduateScreen}
-            />
-            <NoticeStack.Screen 
-                name="Employment" 
-                component={EmploymentScreen}
             />
         </NoticeStack.Navigator>
     );
